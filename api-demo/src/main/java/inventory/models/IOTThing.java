@@ -26,7 +26,7 @@ public class IOTThing extends Hardware {
 
 	public List<Device> simulateInventoryChange() {
 		Random rand = new Random();
-		int action = rand.nextInt(1);
+		int action = rand.nextInt(2);
 		int numOfDevices;
 		String msg = "";
 

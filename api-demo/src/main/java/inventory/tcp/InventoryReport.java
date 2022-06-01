@@ -70,7 +70,7 @@ public class InventoryReport {
 		IOTThing thing = createThing();
 		InventoryReport report = new InventoryReport(thing);
 		report.transmitReportsPeriodically();
-//		report.transmitReportsPeriodically();0
+		report.transmitReportsPeriodically();
 	}
 
 	private static IOTThing createThing() {
