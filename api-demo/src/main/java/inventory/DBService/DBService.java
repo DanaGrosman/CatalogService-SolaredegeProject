@@ -28,12 +28,17 @@ public class DBService {
 	public List<Device> getAllDevices() {
 		return new ArrayList<Device>(devices.values());
 	}
+	
+	// get device by id
+	public Device getDeviceById(UUID id) {
+		return devices.get(id);
+	}
 
-//	// get course by id
-//	public Course getCourseById(Long id) {
-//		return courses.get(id);
-//	}
-//
+	// get thing by id
+	public IOTThing getThingById(UUID id) {
+		return things.get(id);
+	}
+
 	// add course to DB
 	public IOTThing addThing(IOTThing thing) {
 		things.put(thing.getId(), thing);
@@ -90,4 +95,5 @@ public class DBService {
 	public Device deleteDevice(UUID id) {
 		return devices.remove(id);
 	}
+
 }
