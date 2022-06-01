@@ -10,8 +10,8 @@ public class Hardware {
 
 	public Hardware() {
 	}
-
-	public Hardware(UUID id, Type type, String model, String manufacturer) {
+	
+	public Hardware(Type type, String model, String manufacturer) {
 		this.id = UUID.randomUUID();
 		this.type = type;
 		this.model = model;

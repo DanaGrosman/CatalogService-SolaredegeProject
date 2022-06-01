@@ -1,6 +1,5 @@
 package inventory.models;
 
-import java.util.UUID;
 
 public class Device extends Hardware {
 
@@ -10,16 +9,11 @@ public class Device extends Hardware {
 		super();
 	}
 
-	public Device(UUID id, Type type, String model, String manufacturer, double reading) {
-		super(id, type, model, manufacturer);
+	public Device(Type type, String model, String manufacturer, double reading) {
+		super(type, model, manufacturer);
 		this.reading = reading;
 	}
-
-	public Device(double reading) {
-		super();
-		this.reading = reading;
-	}
-
+	
 	public void simulateReading() {
 		// TODO
 	}
