@@ -21,11 +21,6 @@ import jakarta.ws.rs.core.MediaType;
 public class DeviceResource {
 	DBService dbService = new DBService();
 	
-//	@GET
-//	public List<Device> getAllDevices() {
-//		return dbService.getAllDevices();
-//	}
-	
 	@GET
 	@Path("/{id}")
 	public Device getDeviceById(@PathParam("id") UUID id) {
