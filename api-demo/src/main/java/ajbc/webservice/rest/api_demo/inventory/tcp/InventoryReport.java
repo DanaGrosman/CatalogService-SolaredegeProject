@@ -66,11 +66,15 @@ public class InventoryReport {
 		}
 	}
 
-	public static void main(String[] args) throws IOException {
-		IOTThing thing = createThing();
-		InventoryReport report = new InventoryReport(thing);
-		report.transmitReportsPeriodically();
-		report.transmitReportsPeriodically();
+	public static void main(String[] args) throws IOException, InterruptedException {
+		while (true) {
+			IOTThing thing = createThing();
+			InventoryReport report = new InventoryReport(thing);
+			report.transmitReportsPeriodically();
+			report.transmitReportsPeriodically();
+
+			Thread.sleep(2000);
+		}
 	}
 
 	private static IOTThing createThing() {

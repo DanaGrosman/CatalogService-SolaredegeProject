@@ -28,7 +28,7 @@ public class DBMock {
 		iotThings = new HashMap<UUID, IOTThing>();
 		devices = new HashMap<UUID, Device>();
 		// seeding the db
-		seed();
+		//seed();
 	}
 
 	private void seed() {

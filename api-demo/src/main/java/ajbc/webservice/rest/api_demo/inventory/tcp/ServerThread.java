@@ -14,12 +14,13 @@ import ajbc.webservice.rest.api_demo.inventory.models.IOTThing;
 public class ServerThread implements Runnable {
 	private Socket clientSocket;
 	private DBService dbService;
+	private boolean stopped;
 
 	ServerThread(Socket clientSocket) {
 		this.clientSocket = clientSocket;
 		this.dbService = new DBService();
 	}
-	
+
 	@Override
 	public void run() {
 		try (BufferedReader bufferReader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
@@ -40,15 +41,19 @@ public class ServerThread implements Runnable {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
 	}
 
 	public void updateDB(IOTThing iotThing) {
 		IOTThing newThing = dbService.updateThing(iotThing.getId(), iotThing);
-		
-		if(newThing == null)
+
+		if (newThing == null)
 			dbService.addThing(iotThing);
-		
+
 		System.out.println("Updated thing in DB: " + iotThing);
 	}
 
+	public void kill() {
+		stopped = true;
+	}
 }
