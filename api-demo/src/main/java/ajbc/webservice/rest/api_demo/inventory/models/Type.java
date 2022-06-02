@@ -1,4 +1,4 @@
-package inventory.models;
+package ajbc.webservice.rest.api_demo.inventory.models;
 
 public enum Type {
 	CONTROLLER(0), SENSOR(1), ACTUATOR(2);
@@ -8,5 +8,4 @@ public enum Type {
 	private Type(int index) {
 		this.index = index;
 	}
-
 }

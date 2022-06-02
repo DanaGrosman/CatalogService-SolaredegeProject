@@ -1,4 +1,4 @@
-package inventory.tcp;
+package ajbc.webservice.rest.api_demo.inventory.tcp;
 
 import java.io.IOException;
 import java.net.ServerSocket;

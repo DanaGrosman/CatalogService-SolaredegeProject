@@ -1,4 +1,4 @@
-package inventory.models;
+package ajbc.webservice.rest.api_demo.inventory.models;
 
 import java.util.UUID;
 

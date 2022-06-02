@@ -1,4 +1,4 @@
-package inventory.tcp;
+package ajbc.webservice.rest.api_demo.inventory.tcp;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,9 +12,9 @@ import java.util.Random;
 
 import com.google.gson.Gson;
 
-import inventory.models.Device;
-import inventory.models.IOTThing;
-import inventory.models.Type;
+import ajbc.webservice.rest.api_demo.inventory.models.Device;
+import ajbc.webservice.rest.api_demo.inventory.models.IOTThing;
+import ajbc.webservice.rest.api_demo.inventory.models.Type;
 
 public class InventoryReport {
 	private Socket clientSocket;

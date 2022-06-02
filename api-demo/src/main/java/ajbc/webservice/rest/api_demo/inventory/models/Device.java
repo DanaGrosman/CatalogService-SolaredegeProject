@@ -1,4 +1,4 @@
-package inventory.models;
+package ajbc.webservice.rest.api_demo.inventory.models;
 
 
 public class Device extends Hardware {

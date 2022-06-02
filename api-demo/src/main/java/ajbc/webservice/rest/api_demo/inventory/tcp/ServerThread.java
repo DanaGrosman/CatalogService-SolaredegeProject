@@ -1,4 +1,4 @@
-package inventory.tcp;
+package ajbc.webservice.rest.api_demo.inventory.tcp;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,8 +8,8 @@ import java.net.Socket;
 
 import com.google.gson.Gson;
 
-import inventory.DBService.DBService;
-import inventory.models.IOTThing;
+import ajbc.webservice.rest.api_demo.inventory.DBService.DBService;
+import ajbc.webservice.rest.api_demo.inventory.models.IOTThing;
 
 public class ServerThread implements Runnable {
 	private Socket clientSocket;
