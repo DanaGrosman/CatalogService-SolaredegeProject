@@ -49,7 +49,7 @@ public class DBService {
 		return thing;
 	}
 
-	// add course to DB
+	// add thing to DB
 	public IOTThing addThing(IOTThing thing) {
 		things.put(thing.getId(), thing);
 		return thing;
@@ -118,6 +118,7 @@ public class DBService {
 		return thingsByType;
 	}
 
+	// get a thing by model
 	public List<IOTThing> getThingByModel(String model) {
 		List<IOTThing> thingsByModel = new ArrayList<IOTThing>();
 		for (Map.Entry<UUID, IOTThing> entry : things.entrySet()) {
@@ -129,6 +130,7 @@ public class DBService {
 		return thingsByModel;
 	}
 
+	// get a thing by manufacturer
 	public List<IOTThing> getThingByManufacturer(String manufacturer) {
 		List<IOTThing> thingsByManufacturer = new ArrayList<IOTThing>();
 		for (Map.Entry<UUID, IOTThing> entry : things.entrySet()) {
@@ -140,6 +142,7 @@ public class DBService {
 		return thingsByManufacturer;
 	}
 
+	// get a device by type
 	public List<Device> getDeviceByType(Type type) {
 		List<Device> devicesByType = new ArrayList<Device>();
 		for (Map.Entry<UUID, Device> entry : devices.entrySet()) {
@@ -150,7 +153,8 @@ public class DBService {
 
 		return devicesByType;
 	}
-
+	
+	// get a device by model
 	public List<Device> getDeviceByModel(String model) {
 		List<Device> devicesByModel = new ArrayList<Device>();
 		for (Map.Entry<UUID, Device> entry : devices.entrySet()) {
@@ -162,6 +166,7 @@ public class DBService {
 		return devicesByModel;
 	}
 
+	// get a device by manufacturer
 	public List<Device> getDeviceByManufacturer(String manufacturer) {
 		List<Device> devicesByManufacturer = new ArrayList<Device>();
 		for (Map.Entry<UUID, Device> entry : devices.entrySet()) {
@@ -173,6 +178,7 @@ public class DBService {
 		return devicesByManufacturer;
 	}
 
+	// get devices by thingId
 	public List<Device> getDevicesByThingId(UUID thingId) {
 		IOTThing iotThing = getThingById(thingId);
 

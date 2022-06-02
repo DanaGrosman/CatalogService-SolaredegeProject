@@ -24,11 +24,11 @@ public class DBMock {
 		return instance;
 	}
 
-	private DBMock() {
+	public DBMock() {
 		iotThings = new HashMap<UUID, IOTThing>();
 		devices = new HashMap<UUID, Device>();
 		// seeding the db
-		//seed();
+		seed();
 	}
 
 	private void seed() {
@@ -40,10 +40,7 @@ public class DBMock {
 		
 		devices = devicesList.stream().collect(Collectors.toMap(Device::getId, Function.identity()));
 		
-		List<IOTThing> thingsList = Arrays.asList(new IOTThing(Type.CONTROLLER, "Moses", "OOfnik", devicesList),
-				new IOTThing(Type.ACTUATOR, "Happy", "Roller", devicesList), new IOTThing(Type.SENSOR, "Gabby", "Dice", devicesList),
-				new IOTThing(Type.SENSOR, "Charles", "Samson", devicesList), new IOTThing(Type.CONTROLLER, "Rachel", "Palace", devicesList));
-
+		List<IOTThing> thingsList = Arrays.asList(new IOTThing(Type.CONTROLLER, "Moses", "OOfnik", devicesList));
 		iotThings = thingsList.stream().collect(Collectors.toMap(IOTThing::getId, Function.identity()));
 
 	}

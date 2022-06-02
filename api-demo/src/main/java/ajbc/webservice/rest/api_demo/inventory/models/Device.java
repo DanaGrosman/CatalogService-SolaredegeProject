@@ -1,6 +1,5 @@
 package ajbc.webservice.rest.api_demo.inventory.models;
 
-
 public class Device extends Hardware {
 
 	private double reading;
@@ -13,8 +12,8 @@ public class Device extends Hardware {
 		super(type, model, manufacturer);
 		this.reading = reading;
 	}
-	
+
 	public void simulateReading() {
-		// TODO
+		reading++;
 	}
 }
